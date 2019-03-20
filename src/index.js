@@ -21,12 +21,9 @@ module.exports = function check(str, bracketsConfig) {
         continue;
       }
     }
-    if (openBracets.indexOf(stack[stack.length - 1]) === indexClose){
-      stack.pop();
-    }
     if (indexOpen !== -1) {
       stack.push(str[i]);
-       continue;
+      continue;
     }
   }
   if (stack.length !== 0) {
